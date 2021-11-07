@@ -1,5 +1,8 @@
 {
   "recommendations": [
+    // Tailwind CSS
+    "bradlc.vscode-tailwindcss",
+
     // Code style
     "esbenp.prettier-vscode",
     "streetsidesoftware.code-spell-checker",

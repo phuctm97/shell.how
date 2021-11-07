@@ -4,11 +4,10 @@ Write down a command-line to see the help text that matches each argument.
 
 ## Development
 
-First, run the development server:
+Install dependencies and start development:
 
 ```bash
-npm run dev
-# or
+yarn install
 yarn dev
 ```
 

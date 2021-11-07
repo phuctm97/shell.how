@@ -3,6 +3,9 @@
   "typescript.tsdk": "node_modules/typescript/lib",
   "javascript.suggestionActions.enabled": false,
 
+  // Tailwind CSS
+  "css.validate": false,
+
   // Code style
   "editor.defaultFormatter": "esbenp.prettier-vscode",
   "editor.formatOnSave": true,
