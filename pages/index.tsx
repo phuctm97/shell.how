@@ -1,9 +1,9 @@
 import type { NextPage } from "next";
 
-import { useMemo, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 
-interface ParsedCommand {
-  text: string;
+interface ParsedInput {
+  command: string;
   tokens: Array<{
     indices: [number, number]; // [start, end], end is exclusive
     type: string;
@@ -14,7 +14,7 @@ interface ParsedCommand {
 const Index: NextPage = () => {
   const [text, setText] = useState<string>("");
 
-  const parsedCommand = useMemo<ParsedCommand>(() => {
+  const parsed = useMemo<ParsedInput>(() => {
     const escaped = text
       .trim()
       .replace(
@@ -22,24 +22,41 @@ const Index: NextPage = () => {
         (match) => `"${Array.from({ length: match.length - 1 }).join("-")}"`
       );
 
-    const split = escaped.split(" ");
-    const tokens: ParsedCommand["tokens"] = [];
+    const splits = escaped.split(" ");
+    const tokens: ParsedInput["tokens"] = [];
 
     let index = 0;
-    for (const s of split) {
+    for (const split of splits) {
       tokens.push({
         type: "",
-        indices: [index, index + s.length],
-        value: text.substring(index, index + s.length),
+        indices: [index, index + split.length],
+        value: text.substring(index, index + split.length),
       });
-      index += s.length + 1;
+      index += split.length + 1;
     }
 
     return {
-      text,
+      command: tokens.length > 0 ? tokens[0].value : "",
       tokens,
     };
   }, [text]);
+
+  const [spec, setSpec] = useState("");
+  useEffect(() => {
+    if (!parsed.command) {
+      setSpec("");
+      return;
+    }
+    (async () => {
+      try {
+        const url = `https://cdn.skypack.dev/@withfig/autocomplete/build/${parsed.command}.js`;
+        const { default: spec } = await import(/* webpackIgnore: true */ url);
+        setSpec(JSON.stringify(spec, null, 2));
+      } catch {
+        setSpec("");
+      }
+    })();
+  }, [parsed.command]);
 
   return (
     <div>
@@ -61,7 +78,8 @@ const Index: NextPage = () => {
           />
         </div>
       </div>
-      <div>{JSON.stringify(parsedCommand, null, 2)}</div>
+      <div>{JSON.stringify(parsed, null, 2)}</div>
+      {spec}
     </div>
   );
 };
