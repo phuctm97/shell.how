@@ -1,4 +1,12 @@
 {
-  "ignorePaths": ["package.json", "*.config.js", ".*ignore"],
-  "words": ["headlessui", "tailwindcss", "vercel"]
+  "ignorePaths": ["package.json", "tsconfig.json", "*.config.js", ".*ignore"],
+  "words": [
+    "phuctm97",
+    "clsx",
+    "headlessui",
+    "semibold",
+    "skypack",
+    "tailwindcss",
+    "vercel"
+  ]
 }

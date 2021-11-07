@@ -1,4 +1,7 @@
 @layer base {
+  *::selection {
+    @apply bg-teal-200 bg-opacity-80;
+  }
 }
 
 @layer components {
