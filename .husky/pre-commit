@@ -1,0 +1,6 @@
+#!/bin/sh
+. "$(dirname "$0")/_/husky.sh"
+
+yarn prettier --check .
+yarn cspell '**'
+yarn lint

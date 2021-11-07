@@ -1,0 +1,24 @@
+{
+  // TypeScript
+  "typescript.tsdk": "node_modules/typescript/lib",
+  "javascript.suggestionActions.enabled": false,
+
+  // Code style
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.formatOnSave": true,
+  "files.trimTrailingWhitespace": true,
+  "files.trimFinalNewlines": true,
+  "files.insertFinalNewline": true,
+
+  // Commit style
+  "conventionalCommits.gitmoji": false,
+
+  // Hide rarely used files
+  "files.exclude": {
+    "node_modules": true,
+    "yarn.lock": true,
+    ".next": true,
+    "next-env.d.ts": true,
+    ".husky": true
+  }
+}

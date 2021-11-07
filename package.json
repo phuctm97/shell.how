@@ -2,6 +2,7 @@
   "name": "shell-how",
   "private": true,
   "scripts": {
+    "prepare": "husky install",
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
@@ -13,10 +14,16 @@
     "react-dom": "17.0.2"
   },
   "devDependencies": {
+    "@commitlint/cli": "^14.1.0",
+    "@commitlint/config-conventional": "^14.1.0",
+    "@commitlint/prompt-cli": "^14.1.0",
     "@types/node": "16.11.6",
     "@types/react": "17.0.34",
+    "cspell": "^5.12.6",
     "eslint": "7",
     "eslint-config-next": "12.0.3",
+    "husky": "^7.0.4",
+    "prettier": "^2.4.1",
     "typescript": "4.4.4"
   }
 }

@@ -1,0 +1,10 @@
+{
+  "recommendations": [
+    // Code style
+    "esbenp.prettier-vscode",
+    "streetsidesoftware.code-spell-checker",
+
+    // Commit style
+    "vivaxy.vscode-conventional-commits"
+  ]
+}

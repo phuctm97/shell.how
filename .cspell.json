@@ -1,0 +1,4 @@
+{
+  "ignorePaths": ["package.json", "*.config.js", ".*ignore"],
+  "words": ["bitstream", "vercel"]
+}
