@@ -36,10 +36,8 @@ interface Token extends SimpleToken, Fig.BaseSuggestion {
 
 - Install Fig's completion spec locally, avoid (many) network calls as well as depending on Skypack's downtime.
 
-- Generate static sitemaps for all commands defined in Fig's spec → increase SEO.
-
-- Use [Next.js ISR](https://nextjs.org/docs/basic-features/data-fetching#incremental-static-regeneration) to generate static pages for better performance.
-
-- Add autocomplete as the user is typing.
+- Generate static sitemaps for all commands defined in Fig's spec → increase SEO, potentially make this the best place to learn shell command 🔥.
 
 - Generate OG image dynamically for command being queried.
+
+- Add autocomplete as the user is typing.

@@ -1,14 +1,28 @@
-import type { NextPage } from "next";
+import type { GetStaticPaths, GetStaticProps, NextPage } from "next";
 
-import React, { Suspense, useEffect, useRef, useState } from "react";
+import React, {
+  Suspense,
+  useCallback,
+  useEffect,
+  useRef,
+  useState,
+} from "react";
 import { ImSpinner } from "react-icons/im";
-import { HiInformationCircle, HiMoon, HiSun, HiTerminal } from "react-icons/hi";
+import {
+  HiCheck,
+  HiInformationCircle,
+  HiLink,
+  HiMoon,
+  HiSun,
+  HiTerminal,
+} from "react-icons/hi";
 import { useTheme } from "next-themes";
 
 import ErrorBoundary from "components/error-boundary";
 import Explain from "components/explain";
 import SuggestedCommands from "components/suggested-commands";
 import Info from "components/info";
+import useCopyUrl from "hooks/use-copy-url";
 
 const Loading = () => {
   return (
@@ -26,15 +40,27 @@ const BlankState = (props: React.ComponentProps<typeof SuggestedCommands>) => {
   );
 };
 
-const Index: NextPage = () => {
+interface StaticProps {
+  initialCommandString: string;
+}
+
+const Index: NextPage<StaticProps> = ({ initialCommandString }) => {
   const commandInput = useRef<HTMLInputElement>(null);
-  const [commandString, setCommandString] = useState<string>("");
+  const [commandString, setCommandString] =
+    useState<string>(initialCommandString);
 
   // Selection is used to locate which tokens to be highlighted
   const [selection, setSelection] = useState<[number | null, number | null]>([
     null,
     null,
   ]);
+
+  // When user click share, update the current URL and copy it to clipboard for sharing
+  const [hasCopiedUrl, copyUrl] = useCopyUrl();
+  const share = useCallback(() => {
+    window.history.pushState({}, "", `/${encodeURIComponent(commandString)}`);
+    copyUrl();
+  }, [commandString, copyUrl]);
 
   // Show/hide info modal when user clicks on info icon
   const [isInfoOpen, setIsInfoOpen] = useState(false);
@@ -71,13 +97,24 @@ const Index: NextPage = () => {
               <span className="h-3 w-3 rounded-full bg-green-400" />
             </div>
             <div className="mr-4 text-gray-600 flex space-x-2 items-center">
-              <button onClick={() => setIsInfoOpen(true)}>
+              <button
+                onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
+                title="Toggle theme"
+              >
+                {theme === "dark" ? <HiMoon /> : <HiSun />}
+              </button>
+              <button
+                onClick={() => setIsInfoOpen(true)}
+                title="See site's info"
+              >
                 <HiInformationCircle />
               </button>
               <button
-                onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
+                onClick={share}
+                title={hasCopiedUrl ? "Copied" : "Share"}
+                disabled={hasCopiedUrl}
               >
-                {theme === "dark" ? <HiMoon /> : <HiSun />}
+                {hasCopiedUrl ? <HiCheck /> : <HiLink />}
               </button>
             </div>
             <div className="absolute inset-0 pointer-events-none flex items-center justify-center text-sm font-light text-gray-500">
@@ -142,3 +179,20 @@ const Index: NextPage = () => {
 };
 
 export default Index;
+
+export const getStaticProps: GetStaticProps<StaticProps> = async ({
+  params,
+}) => {
+  const { slug = "" } = params ?? {};
+  return {
+    props: { initialCommandString: typeof slug === "string" ? slug : slug[0] },
+  };
+};
+
+export const getStaticPaths: GetStaticPaths = async () => {
+  // Generate static pages for all commands on its first query
+  return {
+    paths: [],
+    fallback: "blocking",
+  };
+};
