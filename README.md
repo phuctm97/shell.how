@@ -1,6 +1,6 @@
 # shell.how
 
-Write down a shell command-line to see it works in details.
+Write down a shell command-line to see how it works in details.
 
 ## Design Choices
 

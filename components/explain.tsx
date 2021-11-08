@@ -105,6 +105,9 @@ const Explain: React.FC<Props> = ({
           onMouseEnter={() =>
             onSelectionChange([token.indices[0], token.indices[1]])
           }
+          onClick={() =>
+            onSelectionChange([token.indices[0], token.indices[1]])
+          }
         >
           <div className="font-mono font-bold">
             <span>

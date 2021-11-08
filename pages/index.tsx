@@ -36,6 +36,7 @@ const Index: NextPage = () => {
     null,
   ]);
 
+  // Show/hide info modal when user clicks on info icon
   const [isInfoOpen, setIsInfoOpen] = useState(false);
 
   const { theme, setTheme } = useTheme();
