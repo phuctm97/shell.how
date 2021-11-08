@@ -1,4 +1,8 @@
 @layer base {
+  body {
+    @apply bg-white dark:bg-black;
+  }
+
   *::selection {
     @apply bg-teal-200 bg-opacity-80 text-black dark:bg-teal-500 dark:bg-opacity-80 dark:text-white;
   }

@@ -26,7 +26,7 @@ import useCopyUrl from "hooks/use-copy-url";
 
 const Loading = () => {
   return (
-    <div className="mt-8 flex items-center justify-center">
+    <div className="mt-8 flex items-center justify-center text-gray-900 dark:text-gray-50">
       <ImSpinner className="animate-spin" />
     </div>
   );

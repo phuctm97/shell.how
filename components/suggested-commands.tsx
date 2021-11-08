@@ -46,10 +46,10 @@ const SuggestedCommands: React.FC<Props> = ({ onSelectCommandString }) => {
               className="group p-2 w-full flex items-center justify-between rounded-full border border-gray-300 dark:border-gray-700 dark:bg-gray-900 shadow-sm space-x-3 text-left hover:bg-gray-50 dark:hover:bg-gray-800 focus:outline-none"
               onClick={onSelectCommandString.bind(null, command)}
             >
-              <span className="min-w-0 flex-1 flex items-center space-x-2 ml-1">
+              <span className="min-w-0 flex-1 flex items-center space-x-2 ml-1 text-gray-900 dark:text-gray-50">
                 <span className="block h-4 w-4 flex-shrink-0">{icon}</span>
                 <span className="block min-w-0 flex-1">
-                  <span className="block text-sm font-medium text-gray-900 dark:text-gray-50 truncate">
+                  <span className="block text-sm font-medium truncate">
                     {command}
                   </span>
                 </span>

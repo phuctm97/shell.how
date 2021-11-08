@@ -96,7 +96,7 @@ const Explain: React.FC<Props> = ({
         <div
           key={token.indices[0]}
           className={clsx(
-            "bg-white dark:bg-black shadow-md rounded p-4 border-2 border-transparent transition",
+            "bg-white text-gray-900 dark:bg-black dark:text-white shadow-md rounded p-4 border-2 border-transparent transition",
             selection[0] !== null &&
               selection[0] >= token.indices[0] &&
               selection[0] <= token.indices[1] &&
