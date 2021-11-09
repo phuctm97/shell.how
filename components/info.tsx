@@ -54,7 +54,8 @@ const Info: React.FC<Props> = ({ open, onClose }) => {
                   </Dialog.Title>
                   <div className="mt-2">
                     <p className="text-sm text-gray-500 dark:text-gray-300">
-                      shell.how is made for free by{" "}
+                      <span className="font-medium">shell.how</span> is made for
+                      free by{" "}
                       <a
                         href="https://twitter.com/phuctm97"
                         className="text-blue-500"
@@ -63,7 +64,16 @@ const Info: React.FC<Props> = ({ open, onClose }) => {
                       >
                         @phuctm97
                       </a>
-                      , using completion spec open-sourced by{" "}
+                      , using{" "}
+                      <a
+                        className="hover:text-gray-600 dark:hover:text-gray-400"
+                        href="https://github.com/withfig/autocomplete"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        open-source completion spec
+                      </a>{" "}
+                      from{" "}
                       <a
                         href="https://twitter.com/fig"
                         className="text-blue-500"
@@ -77,13 +87,14 @@ const Info: React.FC<Props> = ({ open, onClose }) => {
                 </div>
               </div>
               <div className="mt-5 sm:mt-6">
-                <button
-                  type="button"
+                <a
                   className="inline-flex justify-center w-full rounded-md border border-transparent shadow-sm px-4 py-2 bg-gradient-to-r from-teal-500 to-cyan-600 text-base font-medium text-white hover:bg-teal-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-teal-500 sm:text-sm"
-                  onClick={onClose}
+                  href="https://twitter.com/intent/tweet?text=Write%20down%20a%20command%20line%20and%20see%20how%20it%20works%20in%20details%20%F0%9F%92%BB%F0%9F%A4%A9%20-%20shell.how%20by%20%40phuctm97"
+                  target="_blank"
+                  rel="noopener noreferrer"
                 >
-                  Awesome
-                </button>
+                  Tweet it
+                </a>
               </div>
             </div>
           </Transition.Child>
