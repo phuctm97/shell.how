@@ -16,8 +16,10 @@ import {
   HiSun,
   HiTerminal,
 } from "react-icons/hi";
+import { SiGithub } from "react-icons/si";
 import { useTheme } from "next-themes";
 
+import Pkg from "package.json";
 import ErrorBoundary from "components/error-boundary";
 import Explain from "components/explain";
 import SuggestedCommands from "components/suggested-commands";
@@ -83,6 +85,14 @@ const Index: NextPage<StaticProps> = ({ initialCommandString }) => {
           <span className="bg-clip-text text-transparent bg-gradient-to-r from-teal-500 to-cyan-600">
             how?
           </span>
+          <a
+            className="relative top-3.5 transform rotate-12 text-gray-500 hover:text-gray-600 dark:hover:text-gray-400"
+            href={Pkg.repository}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <SiGithub size={18} />
+          </a>
         </h1>
         <p className="mt-2 sm:mt-4 text-xl text-gray-500 dark:text-gray-400 sm:text-center">
           Write down a command-line to see how it works

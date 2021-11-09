@@ -1,6 +1,7 @@
 {
   "name": "shell-how",
   "private": true,
+  "repository": "https://github.com/phuctm97/shell.how",
   "scripts": {
     "prepare": "husky install",
     "dev": "next dev",

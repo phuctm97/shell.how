@@ -9,7 +9,6 @@ import { ThemeProvider } from "next-themes";
 import { RecoilRoot } from "recoil";
 
 import ErrorBoundary from "components/error-boundary";
-import React from "react";
 
 export default function MyApp({ Component, pageProps }: AppProps) {
   return (
