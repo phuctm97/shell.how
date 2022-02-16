@@ -52,48 +52,65 @@ const Info: React.FC<Props> = ({ open, onClose }) => {
                   >
                     Author
                   </Dialog.Title>
-                  <div className="mt-2">
+                  <div className="mt-3 flex flex-col space-y-3">
                     <p className="text-sm text-gray-500 dark:text-gray-300">
-                      <span className="font-medium">shell.how</span> is made for
-                      free by{" "}
+                      <span className="font-medium text-gray-600 dark:text-gray-400">
+                        shell.how
+                      </span>{" "}
+                      was made by{" "}
                       <a
                         href="https://twitter.com/phuctm97"
                         className="text-blue-500"
                         target="_blank"
                         rel="noopener noreferrer"
                       >
-                        @phuctm97
-                      </a>
-                      , using{" "}
-                      <a
-                        className="hover:text-gray-600 dark:hover:text-gray-400"
-                        href="https://github.com/withfig/autocomplete"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                      >
-                        open-source completion spec
+                        Minh-Phuc Tran
                       </a>{" "}
-                      from{" "}
+                      while working at{" "}
                       <a
-                        href="https://twitter.com/fig"
+                        href="https://fig.io"
                         className="text-blue-500"
                         target="_blank"
                         rel="noopener noreferrer"
                       >
-                        @fig.
+                        Fig
                       </a>
+                      . It uses open-source autocomplete specs in{" "}
+                      <a
+                        className=" text-gray-600 hover:text-gray-800 dark:text-gray-400 dark:hover:text-gray-200"
+                        href="https://github.com/withfig/autocomplete"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        withfig/autocomplete Github repo
+                      </a>
+                      .
+                    </p>
+                    <p className="text-sm text-gray-500 dark:text-gray-300">
+                      Want to contribute/create your own completions?{" "}
+                      <a
+                        className=" text-gray-600 hover:text-gray-800 dark:text-gray-400 dark:hover:text-gray-200"
+                        href="https://fig.io/docs"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        Check out fig.io/docs
+                      </a>{" "}
+                      to get started in {"<"}2 minutes.
                     </p>
                   </div>
                 </div>
               </div>
-              <div className="mt-5 sm:mt-6">
+              <div className="mt-4 sm:mt-5">
                 <a
-                  className="inline-flex justify-center w-full rounded-md border border-transparent shadow-sm px-4 py-2 bg-gradient-to-r from-teal-500 to-cyan-600 text-base font-medium text-white hover:bg-teal-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-teal-500 sm:text-sm"
-                  href="https://twitter.com/intent/tweet?text=Write%20down%20a%20command%20line%20and%20see%20how%20it%20works%20in%20details%20%F0%9F%92%BB%F0%9F%A4%A9%20-%20shell.how%20by%20%40phuctm97"
+                  className="inline-flex justify-center w-full space-x-1 rounded-md border border-transparent shadow-sm px-4 py-2 bg-gradient-to-r from-teal-500 to-cyan-600 text-base text-white hover:bg-teal-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-teal-500 sm:text-sm"
+                  href="https://twitter.com/intent/tweet?text=I%20just%20used%20shell.how%20by%20%40fig%20to%20explain%20how%20my%20shell%20command%20works.%20Try%20it%20out%20%F0%9F%9A%80%F0%9F%9B%A0%F0%9F%91%89&url=https%3A%2F%2Fshell.how"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  Tweet it
+                  <span>Tweet about</span>
+                  <span className="font-semibold">shell.how</span>
+                  <span>👉</span>
                 </a>
               </div>
             </div>

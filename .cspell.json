@@ -19,6 +19,7 @@
     "skypack",
     "tailwindcss",
     "tsbuildinfo",
-    "vercel"
+    "vercel",
+    "withfig"
   ]
 }
