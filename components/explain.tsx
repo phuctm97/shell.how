@@ -144,7 +144,7 @@ const Explain: React.FC<Props> = ({
       </div>
       {/* CTA to contribute */}
       {ctaContribToAutocompleteVisible && (
-        <div className="mt-6 text-xs bg-white text-gray-500 dark:bg-black dark:text-gray-400 rounded-full transition flex flex-col items-center">
+        <div className="mt-6 text-xs bg-white text-gray-500 dark:bg-black dark:text-gray-500 rounded-full transition flex flex-col items-center">
           <div className="text-center leading-relaxed">
             Could the descriptions be better? <br className="sm:hidden" />
             Contribute at{" "}
@@ -159,7 +159,7 @@ const Explain: React.FC<Props> = ({
             .
           </div>
           <button
-            className="mt-1 sm:mt-0.5 font-medium text-gray-400 hover:text-gray-600"
+            className="mt-1 sm:mt-0.5 font-medium text-gray-400 hover:text-gray-600 dark:text-gray-600 dark:hover:text-gray-400"
             onClick={() => setCtaContribToAutocompleteVisible(false)}
           >
             Dismiss
