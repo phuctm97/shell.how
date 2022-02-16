@@ -1,3 +1,5 @@
+import { sentenceCase } from "sentence-case";
+
 export interface SimpleToken {
   indices: [number, number]; // [start, end], end is exclusive
   value: string;
@@ -124,7 +126,9 @@ export function parseToSpecTokens(
           specTokens.push({
             ...token,
             type: "argument",
-            description: arg.description,
+            description:
+              arg.description ||
+              (arg.name ? sentenceCase(arg.name) : undefined),
           });
           if (!arg.isVariadic) {
             if (
