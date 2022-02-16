@@ -1,0 +1,24 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+
+jobs:
+  validate-release:
+    name: Validate/Release
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-node@v2
+        with:
+          node-version: 14
+          cache: yarn
+      - run: yarn install --frozen-lockfile
+      - run: yarn tsc --noEmit
+      - run: yarn next lint
+      - run: yarn prettier --check .
+      - run: yarn cspell --no-must-find-files '**'
+      - run: yarn semantic-release --branches ${{ github.ref_name }}
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

@@ -22,7 +22,7 @@ jobs:
       - run: yarn install --frozen-lockfile
       - name: Run yarn commitlint --from=pull_request.title
         run: echo "${{ github.event.pull_request.title }}" | yarn commitlint
-      - run: yarn eslint --ext .js,.jsx,.ts,.tsx
+      - run: yarn next lint
       - run: yarn prettier --check .
       - run: yarn cspell --no-must-find-files '**'
   auto-merge:
