@@ -86,15 +86,16 @@ const Info: React.FC<Props> = ({ open, onClose }) => {
                       </a>
                       .
                     </p>
-                    <br/>
+                    <br />
                     <p className="text-sm text-gray-500 dark:text-gray-300">
                       Want to contribute/create your own completions? Check out{" "}
-                        <a
+                      <a
                         className=" text-gray-600 hover:text-gray-800 dark:text-gray-400 dark:hover:text-gray-200"
                         href="https://fig.io/docs"
                         target="_blank"
                         rel="noopener noreferrer"
-                      >fig.io/docs
+                      >
+                        fig.io/docs
                       </a>
                       !
                     </p>
