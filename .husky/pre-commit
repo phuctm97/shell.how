@@ -1,6 +1,5 @@
 #!/bin/sh
 . "$(dirname "$0")/_/husky.sh"
 
-npx prettier --check .
-npx cspell '**'
-npm run lint
+yarn tsc --noEmit
+yarn lint-staged

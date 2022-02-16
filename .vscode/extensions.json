@@ -5,6 +5,7 @@
 
     // Code style
     "esbenp.prettier-vscode",
+    "dbaeumer.vscode-eslint",
     "streetsidesoftware.code-spell-checker",
 
     // Commit style

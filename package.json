@@ -1,52 +1,51 @@
 {
-  "name": "shell-how",
+  "name": "shell.how",
   "private": true,
   "repository": "https://github.com/phuctm97/shell.how",
+  "engines": {
+    "node": "^14.0.0",
+    "yarn": "^1.22.0"
+  },
   "scripts": {
     "prepare": "husky install",
     "dev": "next dev",
-    "lint": "next lint",
     "build": "next build",
-    "serve": "next start",
-    "start": "npm run build && npm run serve"
+    "serve": "next start"
   },
   "dependencies": {
-    "@headlessui/react": "^1.4.1",
+    "@headlessui/react": "^1.4.3",
     "clsx": "^1.1.1",
     "copy-to-clipboard": "^3.3.1",
-    "next": "12.0.3",
-    "next-seo": "^4.28.1",
+    "next": "^12.0.10",
+    "next-seo": "^5.1.0",
     "next-themes": "^0.0.15",
-    "react": "17.0.2",
-    "react-dom": "17.0.2",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
     "react-icons": "^4.3.1",
-    "recoil": "^0.5.1",
+    "recoil": "^0.6.1",
     "sentence-case": "^3.0.4"
   },
   "devDependencies": {
-    "@babel/core": "^7.16.0",
-    "@commitlint/cli": "^14.1.0",
-    "@commitlint/config-conventional": "^14.1.0",
-    "@commitlint/prompt-cli": "^14.1.0",
-    "@tailwindcss/aspect-ratio": "^0.3.0",
-    "@tailwindcss/forms": "^0.3.4",
-    "@types/node": "16.11.6",
-    "@types/react": "17.0.34",
-    "@withfig/autocomplete-types": "^1.6.0",
-    "autoprefixer": "^10.4.0",
-    "cspell": "^5.12.6",
-    "eslint": "7",
-    "eslint-config-next": "12.0.3",
+    "@commitlint/cli": "^16.2.1",
+    "@commitlint/config-angular": "^16.2.1",
+    "@commitlint/prompt-cli": "^16.2.1",
+    "@tailwindcss/aspect-ratio": "^0.4.0",
+    "@tailwindcss/forms": "^0.4.0",
+    "@types/node": "^14.18.12",
+    "@types/react": "^17.0.39",
+    "@types/react-dom": "^17.0.11",
+    "@withfig/autocomplete-types": "^1.10.0",
+    "autoprefixer": "^10.4.2",
+    "cspell": "^5.18.5",
+    "eslint": "^8.9.0",
+    "eslint-config-next": "^12.0.10",
     "husky": "^7.0.4",
-    "postcss": "^8.3.11",
-    "prettier": "^2.4.1",
-    "tailwindcss": "^2.2.19",
+    "lint-staged": "^12.3.4",
+    "postcss": "^8.4.6",
+    "prettier": "^2.5.1",
+    "tailwindcss": "^3.0.22",
     "tailwindcss-autofill": "^0.1.0",
     "tailwindcss-shadow-fill": "^0.1.0",
-    "typescript": "4.4.4"
-  },
-  "engines": {
-    "node": "^14.0",
-    "npm": "^8.0"
+    "typescript": "^4.5.5"
   }
 }

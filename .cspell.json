@@ -1,7 +1,15 @@
 {
-  "ignorePaths": ["package.json", "tsconfig.json", "*.config.js", ".*ignore"],
+  "ignorePaths": [
+    ".vscode",
+    ".husky",
+    "package.json",
+    "tsconfig.json",
+    "*.config.js",
+    ".*ignore"
+  ],
   "words": [
     "phuctm97",
+    "fig",
     "clsx",
     "headlessui",
     "semibold",
