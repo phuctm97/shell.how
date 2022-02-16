@@ -153,6 +153,9 @@ const Index: NextPage<StaticProps> = ({ initialCommandString }) => {
               name="command-string"
               id="command-string"
               value={commandString}
+              autoFocus
+              autoComplete="off"
+              autoCorrect="off"
               spellCheck="false"
               onChange={(e) => setCommandString(e.target.value.trimStart())}
               onClick={(e) =>
