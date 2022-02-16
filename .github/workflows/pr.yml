@@ -1,0 +1,40 @@
+name: PR
+
+on:
+  pull_request:
+    branches: [main]
+    types: [opened, synchronize, reopened, edited]
+
+permissions:
+  pull-requests: write
+  contents: write
+
+jobs:
+  validate:
+    name: Validate
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-node@v2
+        with:
+          node-version: 14
+          cache: yarn
+      - run: yarn install --frozen-lockfile
+      - name: Run yarn commitlint --from=pull_request.title
+        run: echo "${{ github.event.pull_request.title }}" | yarn commitlint
+      - run: yarn eslint --ext .js,.jsx,.ts,.tsx
+      - run: yarn prettier --check .
+      - run: yarn cspell --no-must-find-files '**'
+  auto-merge:
+    name: Auto-merge
+    if: ${{ github.actor == 'dependabot[bot]' }}
+    runs-on: ubuntu-latest
+    steps:
+      - uses: dependabot/fetch-metadata@v1.1.1
+        id: dependabot-metadata
+        with:
+          github-token: "${{ secrets.GITHUB_TOKEN }}"
+      - run: gh pr merge --auto --squash ${{ github.event.pull_request.html_url }}
+        if: ${{ steps.dependabot-metadata.outputs.update-type != 'version-update:semver-major' }}
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

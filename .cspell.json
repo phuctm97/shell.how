@@ -8,10 +8,11 @@
     ".*ignore"
   ],
   "words": [
-    "phuctm97",
-    "fig",
     "clsx",
+    "commitlint",
+    "fig",
     "headlessui",
+    "phuctm97",
     "semibold",
     "skypack",
     "tailwindcss",

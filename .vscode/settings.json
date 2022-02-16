@@ -19,9 +19,10 @@
   // Hide rarely used files
   "files.exclude": {
     "node_modules": true,
-    "package-lock.json": true,
+    "yarn.lock": true,
     ".next": true,
     "next-env.d.ts": true,
-    ".husky": true
+    ".husky": true,
+    "tsconfig.tsbuildinfo": true
   }
 }
