@@ -86,7 +86,6 @@ const Info: React.FC<Props> = ({ open, onClose }) => {
                       </a>
                       .
                     </p>
-                    <br />
                     <p className="text-sm text-gray-500 dark:text-gray-300">
                       Want to contribute/create your own completions? Check out{" "}
                       <a
