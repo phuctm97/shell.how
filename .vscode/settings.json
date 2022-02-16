@@ -23,6 +23,6 @@
     ".next": true,
     "next-env.d.ts": true,
     ".husky": true,
-    "tsconfig.tsbuildinfo": true
+    "*.tsbuildinfo": true
   }
 }

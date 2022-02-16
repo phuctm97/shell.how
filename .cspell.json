@@ -5,6 +5,7 @@
     "package.json",
     "tsconfig.json",
     "*.config.js",
+    "*.tsbuildinfo",
     ".*ignore"
   ],
   "words": [
@@ -16,6 +17,7 @@
     "semibold",
     "skypack",
     "tailwindcss",
+    "tsbuildinfo",
     "vercel"
   ]
 }
