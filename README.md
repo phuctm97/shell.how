@@ -1,10 +1,26 @@
-# shell.how
+# [shell.how](https://shell.how) &middot; [![CI](https://github.com/phuctm97/shell.how/actions/workflows/ci.yml/badge.svg)](https://github.com/phuctm97/shell.how/actions/workflows/ci.yml)
 
 Write down a shell command-line to see how it works in details.
 
-## Design
+## Contributing
 
-### Stack
+### Requirements
+
+- Node 14
+
+- Yarn 1.22+
+
+### Setup
+
+1. Install requirements
+
+2. Clone the repository
+
+3. Run `yarn` to install dependencies
+
+### Develop
+
+#### Tech stack
 
 - TypeScript
 
@@ -16,7 +32,21 @@ Write down a shell command-line to see how it works in details.
 
 - React concurrent mode for loading data before rendering components & handling error
 
-### Parser
+#### Start development
+
+- Run `yarn start` to start development
+
+- Commit adhering to [Angular commit convention](https://github.com/angular/angular/blob/master/CONTRIBUTING.md#commit), use `yarn commit` or [Code conventional commits](https://marketplace.visualstudio.com/items?itemName=vivaxy.vscode-conventional-commits) to commit interactively
+
+- Submit a PR and make sure required status checks pass
+
+- When a PR is merged or code is pushed to `main`:
+
+  - Vercel deploys latest changes to [shell.how](https://shell.how)
+
+  - Github validates and creates a new release if there're relevant changes
+
+#### Understand parser
 
 The [parser](utils/parser.ts) has 2 steps:
 
@@ -32,18 +62,6 @@ interface Token extends SimpleToken, Fig.BaseSuggestion {
 }
 ```
 
-## Improvements
+## Author
 
-- [ ] Parser: Handle single-quoted strings.
-
-- [ ] Parser: Other improvements to make sure parser's first step always return correct number of tokens.
-
-- [ ] Parser: Handle advanced syntax of options, (can use `yargs` or similar library to parse each option token).
-
-- [ ] Parser: Handle arguments with `isOptional`, `isPersistent`, `isRepeatable`, etc, differently.
-
-- [ ] Performance: Install Fig's completion spec locally and static render first result → avoid (many) network calls client-side.
-
-- [ ] SEO: Generate static sitemaps for all commands defined in spec → increase SEO, potentially make this the best place to search & learn shell command 🔥.
-
-- [ ] Socials: Generate OG image dynamically for command being queried.
+Minh-Phuc Tran ([@phuctm97](https://twitter.com/phuctm97)) - [Fig](https://fig.io)
