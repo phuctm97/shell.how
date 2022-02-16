@@ -61,8 +61,18 @@ const Explain: React.FC<Props> = ({
                 "Empty command."
               ) : (
                 <>
-                  No spec found for{" "}
-                  <span className="font-medium text-yellow-800">{cmd}</span>.
+                  No completion for{" "}
+                  <span className="font-semibold text-yellow-800">{cmd}</span> -
+                  contribute now at{" "}
+                  <a
+                    href="https://fig.io/docs"
+                    className="text-yellow-800 hover:text-yellow-900"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    fig.io/docs
+                  </a>
+                  .
                 </>
               )}
             </p>
@@ -92,6 +102,7 @@ const Explain: React.FC<Props> = ({
 
   return (
     <div className="flex flex-col items-stretch space-y-4 select-none">
+      {/* Results */}
       {parsed.map((token) => (
         <div
           key={token.indices[0]}
@@ -118,6 +129,20 @@ const Explain: React.FC<Props> = ({
           <div>{token.description || sentenceCase(token.type)}</div>
         </div>
       ))}
+      {/* CTA to contribute */}
+      <div className="bg-white text-gray-500 dark:bg-black dark:text-gray-400 shadow-md rounded p-4 border-2 border-transparent transition">
+        Want to make the descriptions better? They{"'"}re open-source!
+        Contribute at{" "}
+        <a
+          href="https://github.com/withfig/autocomplete"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="hover:text-gray-900 dark:hover:text-gray-100"
+        >
+          withfig/autocomplete on Github
+        </a>
+        .
+      </div>
     </div>
   );
 };

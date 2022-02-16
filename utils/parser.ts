@@ -139,7 +139,7 @@ export function parseToSpecTokens(
         } else {
           throw new InvalidTokenError(
             token,
-            "is neither a valid subcommand nor a valid argument"
+            "is neither a valid subcommand, option, or argument"
           );
         }
       }
