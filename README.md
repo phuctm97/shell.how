@@ -1,6 +1,6 @@
 # [shell.how](https://shell.how) &middot; [![CI](https://github.com/phuctm97/shell.how/actions/workflows/ci.yml/badge.svg)](https://github.com/phuctm97/shell.how/actions/workflows/ci.yml)
 
-Write down a shell command-line to see how it works in details.
+Explain shell commands using next-generation autocomplete from [Fig](https://fig.io).
 
 ## Contributing
 

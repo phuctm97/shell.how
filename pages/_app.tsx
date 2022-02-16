@@ -13,7 +13,7 @@ export default function MyApp({ Component, pageProps }: AppProps) {
     <>
       <DefaultSeo
         title="shell.how - How this shell command works?"
-        description="Write down a shell command-line to see how it works in details."
+        description="Explain shell commands using next-generation autocomplete from Fig.io"
         openGraph={{
           type: "website",
           locale: "en_US",
