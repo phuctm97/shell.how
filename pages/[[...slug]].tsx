@@ -96,8 +96,20 @@ const Index: NextPage<StaticProps> = ({ initialCommandString }) => {
             <SiGithub size={18} />
           </a>
         </h1>
-        <p className="mt-2 sm:mt-4 text-xl text-gray-500 dark:text-gray-400 sm:text-center">
-          Write down a command-line to see how it works
+        <p className="mt-2 sm:mt-4 inline-flex items-center space-x-2 text-xl text-gray-500 dark:text-gray-400 sm:text-center">
+          <span>Explain shell commands using</span>
+          <a
+            href="https://fig.io"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center space-x-1"
+          >
+            <Fig aria-hidden />
+            <span className="font-medium text-gray-800 hover:text-black">
+              Fig
+            </span>
+            <FiArrowUpRight size="0.75em" aria-hidden />
+          </a>
         </p>
 
         {/* Input */}
