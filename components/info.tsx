@@ -75,7 +75,7 @@ const Info: React.FC<Props> = ({ open, onClose }) => {
                       >
                         Fig
                       </a>
-                      . It uses open-source autocomplete specs in{" "}
+                      . It uses open-source autocomplete specs from the{" "}
                       <a
                         className=" text-gray-600 hover:text-gray-800 dark:text-gray-400 dark:hover:text-gray-200"
                         href="https://github.com/withfig/autocomplete"
@@ -86,17 +86,17 @@ const Info: React.FC<Props> = ({ open, onClose }) => {
                       </a>
                       .
                     </p>
+                    <br/>
                     <p className="text-sm text-gray-500 dark:text-gray-300">
-                      Want to contribute/create your own completions?{" "}
-                      <a
+                      Want to contribute/create your own completions? Check out{" "}
+                        <a
                         className=" text-gray-600 hover:text-gray-800 dark:text-gray-400 dark:hover:text-gray-200"
                         href="https://fig.io/docs"
                         target="_blank"
                         rel="noopener noreferrer"
-                      >
-                        Check out fig.io/docs
-                      </a>{" "}
-                      to get started in {"<"}2 minutes.
+                      >fig.io/docs
+                      </a>
+                      !
                     </p>
                   </div>
                 </div>
