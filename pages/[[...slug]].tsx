@@ -104,8 +104,8 @@ const Index: NextPage<StaticProps> = ({ initialCommandString }) => {
             rel="noopener noreferrer"
             className="inline-flex items-center space-x-1"
           >
-            <Fig aria-hidden />
-            <span className="font-medium text-gray-800 hover:text-black">
+            <Fig className="dark:invert" aria-hidden />
+            <span className="font-medium text-gray-800 hover:text-black dark:text-gray-200">
               Fig
             </span>
             <FiArrowUpRight size="0.75em" aria-hidden />
