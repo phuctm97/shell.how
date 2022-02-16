@@ -16,6 +16,7 @@ import {
   HiSun,
   HiTerminal,
 } from "react-icons/hi";
+import { FiArrowUpRight } from "react-icons/fi";
 import { SiGithub } from "react-icons/si";
 import { useTheme } from "next-themes";
 
@@ -24,6 +25,7 @@ import ErrorBoundary from "components/error-boundary";
 import Explain from "components/explain";
 import SuggestedCommands from "components/suggested-commands";
 import Info from "components/info";
+import Fig from "icons/fig";
 import useCopyUrl from "hooks/use-copy-url";
 
 const Loading = () => {
@@ -76,7 +78,7 @@ const Index: NextPage<StaticProps> = ({ initialCommandString }) => {
 
   return (
     <>
-      <div className="max-w-7xl mx-auto py-14 sm:py-20 md:py-24 px-4 sm:px-6 lg:px-8 sm:flex sm:flex-col sm:items-center">
+      <div className="max-w-7xl min-h-[calc(100vh-4rem)] mx-auto py-14 sm:py-20 md:py-24 px-4 sm:px-6 lg:px-8 sm:flex sm:flex-col sm:items-center">
         {/* Title */}
         <h1 className="text-5xl font-extrabold text-gray-900 dark:text-white sm:text-center inline-flex items-center select-none">
           <HiTerminal className="mr-2" size="1.2em" />
@@ -183,6 +185,37 @@ const Index: NextPage<StaticProps> = ({ initialCommandString }) => {
           )}
         </div>
       </div>
+      <footer className="w-full h-[4rem] flex justify-center items-center space-x-3 sm:space-x-6">
+        <a
+          href="https://github.com/phuctm97/shell.how/issues"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-xs font-light inline-flex items-center text-gray-700 hover:text-black dark:text-gray-300 hover:dark:text-gray-50"
+        >
+          <span>Send feedback</span>
+          <FiArrowUpRight />
+        </a>
+        <p className="text-xs font-light text-gray-500 dark:text-gray-400">
+          Made by{" "}
+          <a
+            href="https://twitter.com/phuctm97"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="font-medium hover:text-gray-800 dark:hover:text-gray-200 cursor-pointer"
+          >
+            @phuctm97
+          </a>
+        </p>
+        <a
+          href="https://fig.io"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-xs font-light inline-flex items-center text-gray-700 hover:text-black dark:text-gray-300 hover:dark:text-gray-50"
+        >
+          <span>Download Fig</span>
+          <FiArrowUpRight />
+        </a>
+      </footer>
       <Info open={isInfoOpen} onClose={() => setIsInfoOpen(false)} />
     </>
   );
