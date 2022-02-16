@@ -1,4 +1,4 @@
-import React, { useMemo } from "react";
+import React, { useEffect, useMemo, useState } from "react";
 import { HiExclamationCircle, HiXCircle } from "react-icons/hi";
 import clsx from "clsx";
 import { sentenceCase } from "sentence-case";
@@ -44,6 +44,17 @@ const Explain: React.FC<Props> = ({
       else throw err;
     }
   }, [spec, simpleTokens]);
+
+  const [ctaContribToAutocompleteVisible, setCtaContribToAutocompleteVisible] =
+    useState(
+      () => localStorage.getItem("cta/contributeToAutocomplete") !== "off"
+    );
+  useEffect(() => {
+    localStorage.setItem(
+      "cta/contributeToAutocomplete",
+      ctaContribToAutocompleteVisible ? "on" : "off"
+    );
+  }, [ctaContribToAutocompleteVisible]);
 
   if (!cmd || !spec || !parsed)
     return (
@@ -101,49 +112,61 @@ const Explain: React.FC<Props> = ({
     );
 
   return (
-    <div className="flex flex-col items-stretch space-y-4 select-none">
+    <>
       {/* Results */}
-      {parsed.map((token) => (
-        <div
-          key={token.indices[0]}
-          className={clsx(
-            "bg-white text-gray-900 dark:bg-black dark:text-white shadow-md rounded p-4 border-2 border-transparent transition",
-            selection[0] !== null &&
-              selection[0] >= token.indices[0] &&
-              selection[0] <= token.indices[1] &&
-              "border-teal-400 opacity-100"
-          )}
-          onMouseEnter={() =>
-            onSelectionChange([token.indices[0], token.indices[1]])
-          }
-          onClick={() =>
-            onSelectionChange([token.indices[0], token.indices[1]])
-          }
-        >
-          <div className="font-mono font-bold">
-            <span>
-              {token.value}
-              {token.displayName ? ` - ${token.displayName}` : ""}
-            </span>
+      <div className="flex flex-col items-stretch space-y-4 select-none">
+        {parsed.map((token) => (
+          <div
+            key={token.indices[0]}
+            className={clsx(
+              "bg-white text-gray-900 dark:bg-black dark:text-white shadow-md rounded p-4 border-2 border-transparent transition",
+              selection[0] !== null &&
+                selection[0] >= token.indices[0] &&
+                selection[0] <= token.indices[1] &&
+                "border-teal-400 opacity-100"
+            )}
+            onMouseEnter={() =>
+              onSelectionChange([token.indices[0], token.indices[1]])
+            }
+            onClick={() =>
+              onSelectionChange([token.indices[0], token.indices[1]])
+            }
+          >
+            <div className="font-mono font-bold">
+              <span>
+                {token.value}
+                {token.displayName ? ` - ${token.displayName}` : ""}
+              </span>
+            </div>
+            <div>{token.description || sentenceCase(token.type)}</div>
           </div>
-          <div>{token.description || sentenceCase(token.type)}</div>
-        </div>
-      ))}
-      {/* CTA to contribute */}
-      <div className="bg-white text-gray-500 dark:bg-black dark:text-gray-400 shadow-md rounded p-4 border-2 border-transparent transition">
-        Want to make the descriptions better? They{"'"}re open-source!
-        Contribute at{" "}
-        <a
-          href="https://github.com/withfig/autocomplete"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="hover:text-gray-900 dark:hover:text-gray-100"
-        >
-          withfig/autocomplete on Github
-        </a>
-        .
+        ))}
       </div>
-    </div>
+      {/* CTA to contribute */}
+      {ctaContribToAutocompleteVisible && (
+        <div className="mt-6 text-xs bg-white text-gray-500 dark:bg-black dark:text-gray-400 rounded-full transition flex flex-col items-center">
+          <div className="text-center leading-relaxed">
+            Could the descriptions be better? <br className="sm:hidden" />
+            Contribute at{" "}
+            <a
+              href="https://github.com/withfig/autocomplete"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hover:text-gray-900 dark:hover:text-gray-100"
+            >
+              withfig/autocomplete on Github
+            </a>
+            .
+          </div>
+          <button
+            className="mt-1 sm:mt-0.5 font-medium text-gray-400 hover:text-gray-600"
+            onClick={() => setCtaContribToAutocompleteVisible(false)}
+          >
+            Dismiss
+          </button>
+        </div>
+      )}
+    </>
   );
 };
 
