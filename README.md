@@ -2,6 +2,8 @@
 
 Explain shell commands using next-generation autocomplete from [Fig](https://fig.io).
 
+<a href="https://www.producthunt.com/posts/shell-how?utm_source=badge-featured&utm_medium=badge&utm_souce=badge-shell-how" target="_blank"><img src="https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=332221&theme=light" alt="shell.how - Explain how your shell command works | Product Hunt" width="222" height="48" /></a>
+
 ## Contributing
 
 ### Requirements
