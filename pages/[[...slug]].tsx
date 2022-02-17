@@ -79,7 +79,7 @@ const Index: NextPage<StaticProps> = ({ initialCommandString }) => {
 
   return (
     <>
-      <div className="max-w-7xl min-h-[calc(100vh-7rem)] mx-auto py-14 sm:py-20 md:py-24 px-4 sm:px-6 lg:px-8 sm:flex sm:flex-col sm:items-center">
+      <div className="max-w-7xl min-h-[calc(100vh-4.75rem)] mx-auto py-14 sm:py-20 md:py-24 px-4 sm:px-6 lg:px-8 sm:flex sm:flex-col sm:items-center">
         {/* Title */}
         <h1 className="text-5xl font-extrabold text-gray-900 dark:text-white sm:text-center inline-flex items-center select-none">
           <HiTerminal className="mr-2" size="1.2em" />
@@ -202,12 +202,12 @@ const Index: NextPage<StaticProps> = ({ initialCommandString }) => {
           )}
         </div>
       </div>
-      <footer className="relative w-full h-[7rem] flex justify-center items-center space-x-3 sm:space-x-6">
+      <footer className="relative w-full h-[4.75rem] flex justify-center items-center space-x-3 sm:space-x-6">
         <a
           href="https://www.producthunt.com/posts/shell-how?utm_source=badge-featured&utm_medium=badge&utm_souce=badge-shell-how"
           target="_blank"
           rel="noopener noreferrer"
-          className="absolute bottom-[4.5rem]"
+          className="absolute bottom-[3.25rem]"
         >
           <Image
             src="https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=332221&theme=light"
