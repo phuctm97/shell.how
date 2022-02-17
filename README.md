@@ -28,9 +28,9 @@ Explain shell commands using next-generation autocomplete from [Fig](https://fig
 
 - Tailwind CSS
 
-- Recoil for state management, it works natively with React concurrent mode & has builtin caching, allow lean pattern for querying dynamic data (see [hooks/use-spec.ts](hooks/use-spec.ts))
+- Recoil for state management, it works natively with React concurrent mode & has builtin caching, allows lean pattern for querying dynamic data (see [hooks/use-spec.ts](hooks/use-spec.ts))
 
-- React concurrent mode for loading data before rendering components & handling error
+- React concurrent mode for loading data before rendering components & handling errors
 
 #### Start development
 
@@ -50,9 +50,9 @@ Explain shell commands using next-generation autocomplete from [Fig](https://fig
 
 The [parser](utils/parser.ts) has 2 steps:
 
-1. Escape and split the string into tokens delimited white space, quoted strings are considered a single token. Nested quotes are supported, too.
+1. Escape and split the string into tokens delimited white space, a quoted string is a single token. Nested quotes are supported, too.
 
-2. Load spec for command (first token) read from step 1. Iterate through the tokens, validate and annotate the tokens with information from loaded spec.
+2. Load Fig's autocomplete spec for the command (the first token from step 1). Iterate through the tokens, validate, and annotate the tokens with information from the spec.
 
 ```ts
 interface Token extends SimpleToken, Fig.BaseSuggestion {
