@@ -3,7 +3,7 @@
   "private": true,
   "repository": "https://github.com/phuctm97/shell.how",
   "engines": {
-    "node": "^14.0.0",
+    "node": ">=14.0.0",
     "yarn": "^1.22.0"
   },
   "scripts": {
