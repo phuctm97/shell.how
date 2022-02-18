@@ -7,7 +7,6 @@ import React, {
   useRef,
   useState,
 } from "react";
-import Image from "next/image";
 import { ImSpinner } from "react-icons/im";
 import {
   HiCheck,
@@ -209,7 +208,8 @@ const Index: NextPage<StaticProps> = ({ initialCommandString }) => {
           rel="noopener noreferrer"
           className="absolute bottom-[3.25rem]"
         >
-          <Image
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img
             src="https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=332221&theme=light"
             alt="shell.how - Explain how your shell command works | Product Hunt"
             width={250}
