@@ -58,10 +58,10 @@
   resolved "https://registry.yarnpkg.com/@commitlint/config-angular-type-enum/-/config-angular-type-enum-16.2.1.tgz#275f27d677105d20471145a5954f8abbbd5ae3c8"
   integrity sha512-RvYyBKXswXt/rg3y9T966a8bWWhwlfPIdmrJ7jmnGSHOlVYQUKOeVOTd9KWfEN0I+YrJdgB1piH1xoLBo/HQXw==
 
-"@commitlint/config-angular@^16.2.1":
-  version "16.2.1"
-  resolved "https://registry.yarnpkg.com/@commitlint/config-angular/-/config-angular-16.2.1.tgz#c439a6da70d2cfc70de1268c7a1caaa1b5763eeb"
-  integrity sha512-lKk/Qo+8+QQnNEFT6dy42r4KRa5EkL0IE5x35V0QD56Eyiszp3F98jyVgP4vlHztNlEvt1POWN3CBiaJciBAIw==
+"@commitlint/config-angular@^16.2.3":
+  version "16.2.3"
+  resolved "https://registry.yarnpkg.com/@commitlint/config-angular/-/config-angular-16.2.3.tgz#2502d3773be93e60e689f13cc54882e4ede9dddc"
+  integrity sha512-XU6c7qCovKZSat9azF1RF0p9D7gYvxghY5QBWlXN2vSQzdbBVg6RsYEJ0DRMnMq2wSijauf9b13jh8l79IEkzg==
   dependencies:
     "@commitlint/config-angular-type-enum" "^16.2.1"
 
@@ -1036,10 +1036,10 @@
   dependencies:
     "@types/react" "*"
 
-"@types/react@*", "@types/react@^17.0.40":
-  version "17.0.40"
-  resolved "https://registry.yarnpkg.com/@types/react/-/react-17.0.40.tgz#dc010cee6254d5239a138083f3799a16638e6bad"
-  integrity sha512-UrXhD/JyLH+W70nNSufXqMZNuUD2cXHu6UjCllC6pmOQgBX4SGXOH8fjRka0O0Ee0HrFxapDD8Bwn81Kmiz6jQ==
+"@types/react@*", "@types/react@^17.0.41":
+  version "17.0.41"
+  resolved "https://registry.yarnpkg.com/@types/react/-/react-17.0.41.tgz#6e179590d276394de1e357b3f89d05d7d3da8b85"
+  integrity sha512-chYZ9ogWUodyC7VUTRBfblysKLjnohhFY9bGLwvnUFFy48+vB9DikmB3lW0qTFmBcKSzmdglcvkHK71IioOlDA==
   dependencies:
     "@types/prop-types" "*"
     "@types/scheduler" "*"
@@ -4624,10 +4624,10 @@ prelude-ls@^1.2.1:
   resolved "https://registry.yarnpkg.com/prelude-ls/-/prelude-ls-1.2.1.tgz#debc6489d7a6e6b0e7611888cec880337d316396"
   integrity sha512-vkcDPrRZo1QZLbn5RLGPpg/WmIQ65qoWWhcGKf/b5eplkkarX0m9z8ppCat4mlOqUsWpyNuYgO3VRyrYHSzX5g==
 
-prettier@^2.5.1:
-  version "2.5.1"
-  resolved "https://registry.yarnpkg.com/prettier/-/prettier-2.5.1.tgz#fff75fa9d519c54cf0fce328c1017d94546bc56a"
-  integrity sha512-vBZcPRUR5MZJwoyi3ZoyQlc1rXeEck8KgeC9AwwOn+exuxLxq5toTRDTSaVrXHxelDMHy9zlicw8u66yxoSUFg==
+prettier@^2.6.0:
+  version "2.6.0"
+  resolved "https://registry.yarnpkg.com/prettier/-/prettier-2.6.0.tgz#12f8f504c4d8ddb76475f441337542fa799207d4"
+  integrity sha512-m2FgJibYrBGGgQXNzfd0PuDGShJgRavjUoRCw1mZERIWVSXF0iLzLm+aOqTAbLnC3n6JzUhAA8uZnFVghHJ86A==
 
 proc-log@^1.0.0:
   version "1.0.0"
