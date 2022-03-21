@@ -129,6 +129,23 @@
     resolve-from "^5.0.0"
     typescript "^4.4.3"
 
+"@commitlint/load@^16.2.3":
+  version "16.2.3"
+  resolved "https://registry.yarnpkg.com/@commitlint/load/-/load-16.2.3.tgz#7b2e85af25a6f736f080ba08e7165738cedf8c8f"
+  integrity sha512-Hb4OUlMnBUK6UxJEZ/VJ5k0LocIS7PtEMbRXEAA7eSpOgORIFexC4K/RaRpVd5UTtu3M0ST3ddPPijF9rdW6nw==
+  dependencies:
+    "@commitlint/config-validator" "^16.2.1"
+    "@commitlint/execute-rule" "^16.2.1"
+    "@commitlint/resolve-extends" "^16.2.1"
+    "@commitlint/types" "^16.2.1"
+    "@types/node" ">=12"
+    chalk "^4.0.0"
+    cosmiconfig "^7.0.0"
+    cosmiconfig-typescript-loader "^1.0.0"
+    lodash "^4.17.19"
+    resolve-from "^5.0.0"
+    typescript "^4.4.3"
+
 "@commitlint/message@^16.2.1":
   version "16.2.1"
   resolved "https://registry.yarnpkg.com/@commitlint/message/-/message-16.2.1.tgz#bc6a0fa446a746ac2ca78cf372e4cec48daf620d"
@@ -143,22 +160,22 @@
     conventional-changelog-angular "^5.0.11"
     conventional-commits-parser "^3.2.2"
 
-"@commitlint/prompt-cli@^16.2.1":
-  version "16.2.1"
-  resolved "https://registry.yarnpkg.com/@commitlint/prompt-cli/-/prompt-cli-16.2.1.tgz#ff1ad97d81c77cd897c4c74f03dffc6a7acbce8d"
-  integrity sha512-OOisKi5HEFHv5+sPvAjbW2v/PoyeuQYTdxu7szW7LIp3gS3enut8BVEqWmZ9+G8M1speJp8CryPWKsVYMKZx5A==
+"@commitlint/prompt-cli@^16.2.3":
+  version "16.2.3"
+  resolved "https://registry.yarnpkg.com/@commitlint/prompt-cli/-/prompt-cli-16.2.3.tgz#b6e8667269e575d5fab63ae333a22b2e45ad2673"
+  integrity sha512-vaLNR+pO1uKMNJn5iSB0AQe0oANiLiV//R46iylRF5rtixjadKL4Oz13s8ddKRB1J3ISZywaWweHIYEpNAvYeg==
   dependencies:
-    "@commitlint/prompt" "^16.2.1"
+    "@commitlint/prompt" "^16.2.3"
     execa "^5.0.0"
     inquirer "^6.5.2"
 
-"@commitlint/prompt@^16.2.1":
-  version "16.2.1"
-  resolved "https://registry.yarnpkg.com/@commitlint/prompt/-/prompt-16.2.1.tgz#2152c33ffcaa130f9fdd2400a5edf7c3bb9af78d"
-  integrity sha512-FW/16mYxeeLmEiRWItPNDKlHwwXRbW4KsMf5i96gsTtHxG4d9YqdA8cOhNVOgXhfLByHSfn184K+UVcl6Jw3xw==
+"@commitlint/prompt@^16.2.3":
+  version "16.2.3"
+  resolved "https://registry.yarnpkg.com/@commitlint/prompt/-/prompt-16.2.3.tgz#919c4bd1d735147d8213ea49c8f7c6bb4f55b9ae"
+  integrity sha512-9xa7kIeOLK77HA0UbGlu1kps7ZquRI00qhfvugQVnefli7gFcPdvE0/sqyo/tvZ3/hdWaoPve/+QbLTm/z864A==
   dependencies:
     "@commitlint/ensure" "^16.2.1"
-    "@commitlint/load" "^16.2.1"
+    "@commitlint/load" "^16.2.3"
     "@commitlint/types" "^16.2.1"
     chalk "^4.0.0"
     inquirer "^6.5.2"
