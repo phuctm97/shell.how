@@ -26,7 +26,7 @@
     "sentence-case": "^3.0.4"
   },
   "devDependencies": {
-    "@commitlint/cli": "^16.2.1",
+    "@commitlint/cli": "^16.2.3",
     "@commitlint/config-angular": "^16.2.3",
     "@commitlint/prompt-cli": "^16.2.3",
     "@tailwindcss/aspect-ratio": "^0.4.0",
