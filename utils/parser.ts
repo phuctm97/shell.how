@@ -79,34 +79,52 @@ export function parseToSpecTokens(
     const token = simpleTokens[i];
     if (token.value.startsWith("-")) {
       // Is an option
-      const option = spec.options?.find(({ name }) =>
-        Array.isArray(name) ? name.includes(token.value) : token.value === name
-      );
-      if (!option) throw new InvalidTokenError(token, `option is unknown`);
-
-      const optionToken: SpecToken = {
-        ...token,
-        type: "option",
-        displayName: option.displayName,
-        icon: option.icon,
-        description: option.description,
-      };
-      specTokens.push(optionToken);
-      if (!option.args) continue;
-
-      // Iterate through all arguments of the option and merge them into a single token
-      // with the option (because argument spec don't currently have good description, otherwise
-      // we may want to treat arguments as separate tokens)
-      const optionArgs = Array.isArray(option.args)
-        ? option.args
-        : [option.args];
-      let j = 0;
-      for (; j < optionArgs.length && i + j + 1 < simpleTokens.length; j++) {
-        const argToken = simpleTokens[i + j + 1];
-        optionToken.value += ` ${argToken.value}`;
-        optionToken.indices[1] = argToken.indices[1];
+      const nestedTokens: SimpleToken[] = [];
+      if (token.value.startsWith("--"))
+        nestedTokens.push(token); // Long-form option
+      else {
+        // Short-form options
+        const nestedValues = token.value.substring(1).split("");
+        nestedTokens.push(
+          ...nestedValues.map((value, index) => ({
+            indices: [
+              token.indices[0] + index + 1,
+              token.indices[0] + index + 2,
+            ] as [number, number],
+            value: `-${value}`,
+          }))
+        );
       }
-      i += j;
+      for (const token of nestedTokens) {
+        const option = spec.options?.find(({ name }) =>
+          Array.isArray(name)
+            ? name.includes(token.value)
+            : token.value === name
+        );
+        if (!option) throw new InvalidTokenError(token, `option is unknown`);
+        const optionToken: SpecToken = {
+          ...token,
+          type: "option",
+          displayName: option.displayName,
+          icon: option.icon,
+          description: option.description,
+        };
+        specTokens.push(optionToken);
+        if (!option.args) continue;
+        // Iterate through all arguments of the option and merge them into a single token
+        // with the option (because argument spec don't currently have good description, otherwise
+        // we may want to treat arguments as separate tokens)
+        const optionArgs = Array.isArray(option.args)
+          ? option.args
+          : [option.args];
+        let j = 0;
+        for (; j < optionArgs.length && i + j + 1 < simpleTokens.length; j++) {
+          const argToken = simpleTokens[i + j + 1];
+          optionToken.value += ` ${argToken.value}`;
+          optionToken.indices[1] = argToken.indices[1];
+        }
+        i += j;
+      }
     } else {
       const subcommand = spec.subcommands?.find(({ name }) =>
         Array.isArray(name) ? name.includes(token.value) : token.value === name
