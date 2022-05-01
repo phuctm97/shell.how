@@ -1104,10 +1104,10 @@
     "@typescript-eslint/types" "5.10.1"
     eslint-visitor-keys "^3.0.0"
 
-"@withfig/autocomplete-types@^1.14.0":
-  version "1.14.0"
-  resolved "https://registry.yarnpkg.com/@withfig/autocomplete-types/-/autocomplete-types-1.14.0.tgz#f1f0b7329d43d7fa2f132464f50b54d49d3ee3b6"
-  integrity sha512-JVl+JkMXLCAVmkG7QaGCk1QcJo9zwgoUcw6vVysaG6tyYT9lFW1xMuc9nZxqaK8GAdmTebElQ0v2zUaTQTsk+g==
+"@withfig/autocomplete-types@^1.15.0":
+  version "1.15.0"
+  resolved "https://registry.yarnpkg.com/@withfig/autocomplete-types/-/autocomplete-types-1.15.0.tgz#00836a5656c2a3530bbffd7858bc086632f82ce7"
+  integrity sha512-fqXQmo4/ubRmpqSHtV1CG6l5eTRMlH1XZ0HvLiW2xs2+Ucw5TfrK4P168CsYXWbgfX8HKV1olDnNDbXonFbGOw==
 
 JSONStream@^1.0.4:
   version "1.3.5"
