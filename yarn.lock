@@ -2613,10 +2613,10 @@ flatted@^3.1.0:
   resolved "https://registry.yarnpkg.com/flatted/-/flatted-3.2.5.tgz#76c8584f4fc843db64702a6bd04ab7a8bd666da3"
   integrity sha512-WIWGi2L3DyTUvUrwRKgGi9TwxQMUEqPOPQBVi71R96jZXJdFskXEmf54BoZaS1kknGODoIGASGEzBUYdyMCBJg==
 
-flatten-tailwindcss-theme@^0.1.1:
-  version "0.1.1"
-  resolved "https://registry.yarnpkg.com/flatten-tailwindcss-theme/-/flatten-tailwindcss-theme-0.1.1.tgz#c74a06aeb98e110b8f711ec26a973be74fc62a0b"
-  integrity sha512-H4VV6pXPVX+NZMy4Ddky+Ae3y8hRrDmYn1piauHx3nPWa/4YS6ufL2G4crxqisGawHGztSTJ5TjZkmiyTA035Q==
+flatten-tailwindcss-theme@^1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/flatten-tailwindcss-theme/-/flatten-tailwindcss-theme-1.0.0.tgz#e1ce77c4b4979fe432e799cc2dad469a7a664b86"
+  integrity sha512-7B795m0qzLF0yQYGkfGanO3NOisEI4EaVObnr3DBq7Qc8Ygq4yWGa0Gpx2rtb10NSgIcimUqu4Xaqh+0bkC87w==
 
 fraction.js@^4.2.0:
   version "4.2.0"
@@ -5484,12 +5484,12 @@ tailwindcss-autofill@^1.0.2:
   resolved "https://registry.yarnpkg.com/tailwindcss-autofill/-/tailwindcss-autofill-1.0.2.tgz#8f4c4ef68bf1f8ed08fbb98ede20a8a9e6cca025"
   integrity sha512-gbm/ZKvU7EW2kzSoyCREwsNSQlsgEmNWnagggz6dGl1QgtM9RkmeWRicAY+eSnI9VFnfYCQOAthW9gDKZjda4Q==
 
-tailwindcss-shadow-fill@^0.1.0:
-  version "0.1.0"
-  resolved "https://registry.yarnpkg.com/tailwindcss-shadow-fill/-/tailwindcss-shadow-fill-0.1.0.tgz#25f1427639fae588aad6832e57e425a76ed0b000"
-  integrity sha512-td+BBkMQuHFdsUKXRGogk8YfS3ptCK84zZFuDrlhNgWls6UIGUI7w+GaMTKleL1PthTZJqf0L2xmQOUxuEEM0A==
+tailwindcss-shadow-fill@^1.0.1:
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/tailwindcss-shadow-fill/-/tailwindcss-shadow-fill-1.0.1.tgz#80ebaf75ee0a9df3004ac3b2df526a96cb3bef73"
+  integrity sha512-GvPU6IEXFprcvz/qz7SbAdlciWHg5CFg427nmrCPN1BYaDxTKxcxmFy/vh35i2/4RW3AHIRBp/h6VADMpYryww==
   dependencies:
-    flatten-tailwindcss-theme "^0.1.1"
+    flatten-tailwindcss-theme "^1.0.0"
 
 tailwindcss@^3.0.24:
   version "3.0.24"
