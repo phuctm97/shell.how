@@ -5479,10 +5479,10 @@ supports-preserve-symlinks-flag@^1.0.0:
   resolved "https://registry.yarnpkg.com/supports-preserve-symlinks-flag/-/supports-preserve-symlinks-flag-1.0.0.tgz#6eda4bd344a3c94aea376d4cc31bc77311039e09"
   integrity sha512-ot0WnXS9fgdkgIcePe6RHNk1WA8+muPa6cSjeR3V8K27q9BB1rTE3R1p7Hv0z1ZyAc8s6Vvv8DIyWf681MAt0w==
 
-tailwindcss-autofill@^0.1.0:
-  version "0.1.0"
-  resolved "https://registry.yarnpkg.com/tailwindcss-autofill/-/tailwindcss-autofill-0.1.0.tgz#ca5872c866bea13ac45fd1610c7b48199156702f"
-  integrity sha512-U7P+smNko8729EIe/FOXJvcoZt6LAzexevBuZ8pkrdoazAoabUGFdE/xOaGTb9P7rzkNp4OGH0WeE8Y8UvnDtw==
+tailwindcss-autofill@^1.0.2:
+  version "1.0.2"
+  resolved "https://registry.yarnpkg.com/tailwindcss-autofill/-/tailwindcss-autofill-1.0.2.tgz#8f4c4ef68bf1f8ed08fbb98ede20a8a9e6cca025"
+  integrity sha512-gbm/ZKvU7EW2kzSoyCREwsNSQlsgEmNWnagggz6dGl1QgtM9RkmeWRicAY+eSnI9VFnfYCQOAthW9gDKZjda4Q==
 
 tailwindcss-shadow-fill@^0.1.0:
   version "0.1.0"
