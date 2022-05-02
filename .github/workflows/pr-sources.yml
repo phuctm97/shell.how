@@ -1,12 +1,12 @@
-name: CI
+name: PR / Sources
 
 on:
-  push:
+  pull_request:
     branches: [main]
 
 jobs:
-  validate-release:
-    name: Validate & Release
+  validate-sources:
+    name: Validate sources
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
@@ -15,10 +15,6 @@ jobs:
           node-version: 14
           cache: yarn
       - run: yarn install --frozen-lockfile
-      - run: yarn tsc --noEmit
       - run: yarn next lint
       - run: yarn prettier --check .
       - run: yarn cspell --no-must-find-files '**'
-      - run: yarn semantic-release --branches ${{ github.ref_name }}
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

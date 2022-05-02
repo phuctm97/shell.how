@@ -1,4 +1,4 @@
-name: PR
+name: PR / Metadata
 
 on:
   pull_request:
@@ -10,8 +10,8 @@ permissions:
   contents: write
 
 jobs:
-  validate:
-    name: Validate
+  validate-metadata:
+    name: Validate metadata
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
@@ -22,9 +22,6 @@ jobs:
       - run: yarn install --frozen-lockfile
       - name: Run yarn commitlint --from=pull_request.title
         run: echo "${{ github.event.pull_request.title }}" | yarn commitlint
-      - run: yarn next lint
-      - run: yarn prettier --check .
-      - run: yarn cspell --no-must-find-files '**'
   auto-merge:
     name: Auto-merge
     if: ${{ github.actor == 'dependabot[bot]' }}
