@@ -1,11 +1,19 @@
 import React from "react";
 import { HiXCircle } from "react-icons/hi";
 
+export interface ErrorBoundaryProps {
+  children: React.ReactNode;
+}
+
+export interface ErrorBoundaryState {
+  hasError: boolean;
+}
+
 export default class ErrorBoundary extends React.Component<
-  {},
-  { hasError: boolean }
+  ErrorBoundaryProps,
+  ErrorBoundaryState
 > {
-  constructor(props: {}) {
+  constructor(props: ErrorBoundaryProps) {
     super(props);
     this.state = { hasError: false };
   }
