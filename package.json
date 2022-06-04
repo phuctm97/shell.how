@@ -21,7 +21,7 @@
     "next-themes": "^0.2.0",
     "react": "^18.1.0",
     "react-dom": "^18.1.0",
-    "react-icons": "^4.3.1",
+    "react-icons": "^4.4.0",
     "recoil": "^0.7.2",
     "sentence-case": "^3.0.4"
   },
