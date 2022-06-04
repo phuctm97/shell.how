@@ -26,7 +26,7 @@
     "sentence-case": "^3.0.4"
   },
   "devDependencies": {
-    "@commitlint/cli": "^16.2.4",
+    "@commitlint/cli": "^17.0.2",
     "@commitlint/config-angular": "^16.2.4",
     "@commitlint/prompt-cli": "^16.2.4",
     "@tailwindcss/aspect-ratio": "^0.4.0",
@@ -40,7 +40,7 @@
     "eslint": "^8.14.0",
     "eslint-config-next": "^12.1.5",
     "husky": "^7.0.4",
-    "lint-staged": "^12.4.1",
+    "lint-staged": "^13.0.0",
     "postcss": "^8.4.14",
     "prettier": "^2.6.2",
     "semantic-release": "^19.0.2",
