@@ -22,7 +22,7 @@
     "react": "^18.2.0",
     "react-dom": "^18.1.0",
     "react-icons": "^4.4.0",
-    "recoil": "^0.7.2",
+    "recoil": "^0.7.4",
     "sentence-case": "^3.0.4"
   },
   "devDependencies": {
