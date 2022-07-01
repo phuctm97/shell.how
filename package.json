@@ -20,7 +20,7 @@
     "next-seo": "^5.4.0",
     "next-themes": "^0.2.0",
     "react": "^18.2.0",
-    "react-dom": "^18.1.0",
+    "react-dom": "^18.2.0",
     "react-icons": "^4.4.0",
     "recoil": "^0.7.4",
     "sentence-case": "^3.0.4"
@@ -33,7 +33,7 @@
     "@tailwindcss/forms": "^0.5.2",
     "@types/node": "^14.18.20",
     "@types/react": "^18.0.14",
-    "@types/react-dom": "^18.0.3",
+    "@types/react-dom": "^18.0.5",
     "@withfig/autocomplete-types": "^1.17.1",
     "autoprefixer": "^10.4.7",
     "cspell": "^6.2.0",
