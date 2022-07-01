@@ -13,7 +13,7 @@
     "serve": "next start"
   },
   "dependencies": {
-    "@headlessui/react": "^1.6.4",
+    "@headlessui/react": "^1.6.5",
     "clsx": "^1.1.1",
     "copy-to-clipboard": "^3.3.1",
     "next": "^12.1.5",
@@ -28,14 +28,14 @@
   "devDependencies": {
     "@commitlint/cli": "^17.0.2",
     "@commitlint/config-angular": "^17.0.0",
-    "@commitlint/prompt-cli": "^17.0.0",
+    "@commitlint/prompt-cli": "^17.0.3",
     "@tailwindcss/aspect-ratio": "^0.4.0",
     "@tailwindcss/forms": "^0.5.2",
     "@types/node": "^14.18.20",
     "@types/react": "^18.0.10",
     "@types/react-dom": "^18.0.3",
     "@withfig/autocomplete-types": "^1.17.1",
-    "autoprefixer": "^10.4.5",
+    "autoprefixer": "^10.4.7",
     "cspell": "^6.1.1",
     "eslint": "^8.14.0",
     "eslint-config-next": "^12.1.5",
