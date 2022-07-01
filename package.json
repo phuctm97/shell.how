@@ -37,7 +37,7 @@
     "@withfig/autocomplete-types": "^1.17.1",
     "autoprefixer": "^10.4.7",
     "cspell": "^6.2.0",
-    "eslint": "^8.14.0",
+    "eslint": "^8.18.0",
     "eslint-config-next": "^12.2.0",
     "husky": "^8.0.1",
     "lint-staged": "^13.0.0",
