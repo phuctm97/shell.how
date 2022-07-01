@@ -47,6 +47,6 @@
     "tailwindcss": "^3.1.4",
     "tailwindcss-autofill": "^1.0.2",
     "tailwindcss-shadow-fill": "^1.0.1",
-    "typescript": "^4.7.3"
+    "typescript": "^4.7.4"
   }
 }
