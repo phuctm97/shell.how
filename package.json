@@ -13,7 +13,7 @@
     "serve": "next start"
   },
   "dependencies": {
-    "@headlessui/react": "^1.6.4",
+    "@headlessui/react": "^1.6.5",
     "clsx": "^1.1.1",
     "copy-to-clipboard": "^3.3.1",
     "next": "^12.1.5",
