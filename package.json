@@ -38,7 +38,7 @@
     "autoprefixer": "^10.4.7",
     "cspell": "^6.2.0",
     "eslint": "^8.18.0",
-    "eslint-config-next": "^12.2.0",
+    "eslint-config-next": "^12.2.4",
     "husky": "^8.0.1",
     "lint-staged": "^13.0.3",
     "postcss": "^8.4.14",
