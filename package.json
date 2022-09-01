@@ -36,7 +36,7 @@
     "@types/react-dom": "^18.0.6",
     "@withfig/autocomplete-types": "^1.19.0",
     "autoprefixer": "^10.4.8",
-    "cspell": "^6.6.0",
+    "cspell": "^6.8.1",
     "eslint": "^8.23.0",
     "eslint-config-next": "^12.2.4",
     "husky": "^8.0.1",
