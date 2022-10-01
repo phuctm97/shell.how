@@ -27,7 +27,7 @@ jobs:
     if: ${{ github.actor == 'dependabot[bot]' }}
     runs-on: ubuntu-latest
     steps:
-      - uses: dependabot/fetch-metadata@v1.3.3
+      - uses: dependabot/fetch-metadata@v1.3.4
         id: dependabot-metadata
         with:
           github-token: "${{ secrets.GITHUB_TOKEN }}"
