@@ -13,7 +13,7 @@
     "serve": "next start"
   },
   "dependencies": {
-    "@headlessui/react": "^1.6.6",
+    "@headlessui/react": "^1.7.3",
     "clsx": "^1.2.1",
     "copy-to-clipboard": "^3.3.2",
     "next": "^12.3.1",
@@ -36,7 +36,7 @@
     "@types/react-dom": "^18.0.6",
     "@withfig/autocomplete-types": "^1.23.0",
     "autoprefixer": "^10.4.8",
-    "cspell": "^6.8.1",
+    "cspell": "^6.12.0",
     "eslint": "^8.24.0",
     "eslint-config-next": "^12.2.5",
     "husky": "^8.0.1",
