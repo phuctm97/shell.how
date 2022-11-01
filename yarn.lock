@@ -125,7 +125,7 @@
     "@commitlint/rules" "^17.2.0"
     "@commitlint/types" "^17.0.0"
 
-"@commitlint/load@^17.1.2", "@commitlint/load@^17.2.0":
+"@commitlint/load@^17.2.0":
   version "17.2.0"
   resolved "https://registry.yarnpkg.com/@commitlint/load/-/load-17.2.0.tgz#11c9fb23a967ff1507a28931c91aae7f978ea4ae"
   integrity sha512-HDD57qSqNrk399R4TIjw31AWBG8dBjNj1MrDKZKmC/wvimtnIFlqzcu1+sxfXIOHj/+M6tcMWDtvknGUd7SU+g==
@@ -157,22 +157,22 @@
     conventional-changelog-angular "^5.0.11"
     conventional-commits-parser "^3.2.2"
 
-"@commitlint/prompt-cli@^17.1.2":
-  version "17.1.2"
-  resolved "https://registry.yarnpkg.com/@commitlint/prompt-cli/-/prompt-cli-17.1.2.tgz#3258e70daf5d30920828231d3dbf9ac67b5ded33"
-  integrity sha512-VqfPBfOXrV5hXmYt1gRi/fwd+wPHN9QesCjOC0CC0uGWy5etggK2sb7HzjbfrOOIuFa2gk7v5mX/F/38RlRvVg==
+"@commitlint/prompt-cli@^17.2.0":
+  version "17.2.0"
+  resolved "https://registry.yarnpkg.com/@commitlint/prompt-cli/-/prompt-cli-17.2.0.tgz#897ecedd1a1f6a91ad4adb5196326149cac7b044"
+  integrity sha512-CQjABqmB6V76zpp3q7AzzYu3P8UDrv4j8e60OFiY7tzPny5a0CLvB8yp0+8Y4Z99OtOPDY9mKJku7jm1MP0OJQ==
   dependencies:
-    "@commitlint/prompt" "^17.1.2"
+    "@commitlint/prompt" "^17.2.0"
     execa "^5.0.0"
     inquirer "^6.5.2"
 
-"@commitlint/prompt@^17.1.2":
-  version "17.1.2"
-  resolved "https://registry.yarnpkg.com/@commitlint/prompt/-/prompt-17.1.2.tgz#ad3338eb54f869216692cc42e80b2eb7746b0b1d"
-  integrity sha512-KubucHY9EnHnao7zgdXsOpckLZA5PgXvaR/eI6IQY2xzuG6RPlVqIffSPpiDjX09SopoYRWbztvkg+Z2m0ib9g==
+"@commitlint/prompt@^17.2.0":
+  version "17.2.0"
+  resolved "https://registry.yarnpkg.com/@commitlint/prompt/-/prompt-17.2.0.tgz#e687521bce9bf4fc1ee1eb7a0b89e80f5e1be8fd"
+  integrity sha512-xMWMJteq0VZ25i8IaXGBmUMEg8l5SQewvk21jp//BPkKSOxEwXFUSiwMA6iUkILCWHHffQBAgs/1O+4HqZrtaQ==
   dependencies:
     "@commitlint/ensure" "^17.0.0"
-    "@commitlint/load" "^17.1.2"
+    "@commitlint/load" "^17.2.0"
     "@commitlint/types" "^17.0.0"
     chalk "^4.1.0"
     inquirer "^6.5.2"
