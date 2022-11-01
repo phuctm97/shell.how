@@ -27,7 +27,7 @@
   },
   "devDependencies": {
     "@commitlint/cli": "^17.2.0",
-    "@commitlint/config-angular": "^17.1.0",
+    "@commitlint/config-angular": "^17.2.0",
     "@commitlint/prompt-cli": "^17.2.0",
     "@tailwindcss/aspect-ratio": "^0.4.2",
     "@tailwindcss/forms": "^0.5.3",
