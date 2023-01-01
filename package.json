@@ -44,7 +44,7 @@
     "postcss": "^8.4.17",
     "prettier": "^2.7.1",
     "semantic-release": "^19.0.5",
-    "tailwindcss": "^3.1.8",
+    "tailwindcss": "^3.2.4",
     "tailwindcss-autofill": "^1.0.2",
     "tailwindcss-shadow-fill": "^1.0.1",
     "typescript": "^4.8.4"
