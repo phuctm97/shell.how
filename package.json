@@ -16,7 +16,7 @@
     "@headlessui/react": "^1.7.3",
     "clsx": "^1.2.1",
     "copy-to-clipboard": "^3.3.3",
-    "next": "^12.3.1",
+    "next": "^13.4.4",
     "next-seo": "^5.5.0",
     "next-themes": "^0.2.1",
     "react": "^18.2.0",
